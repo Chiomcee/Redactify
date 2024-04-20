@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="author" content="Chioma">
+<meta name="keyword" content="This is a web page allows users to input text and specify words they want to redact">
+<meta name="description" content="page holding redact codes">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Redact Text</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Redact Text</h1>
+    <form id="redactForm">
+        <label for="originalText">Original Text:</label><br>
+        <textarea id="originalText" name="originalText" rows="5" required></textarea><br><br>
+
+        <label for="wordsToRedact">Words to Redact:</label><br>
+        <input type="text" id="wordsToRedact" name="wordsToRedact" required><br><br>
+
+        <label for="replacement">Replacement:</label><br>
+        <input type="text" id="replacement" name="replacement" value="****"><br><br>
+
+        <input type="submit" value="Redact Now">
+    </form>
+    <div id="redactedText" style="display: none;">
+        <h2>Redacted Text:</h2>
+        <p id="redactedContent"></p>
+        <p id="stats"></p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
